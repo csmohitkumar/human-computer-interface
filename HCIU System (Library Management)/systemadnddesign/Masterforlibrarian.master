@@ -1,0 +1,194 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Masterforlibrarian.master.cs" Inherits="Masterforlibrarian" %>
+
+<%@ Register assembly="EO.Web" namespace="EO.Web" tagprefix="eo" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="shortcut icon" href="images/Logo.PNG" type="image/gif"/>
+    <link rel='stylesheet' type='text/css' href='styles.css' />
+    <link rel='stylesheet' type='text/css' href='styles2.css' />
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <style type="text/css">
+        .style1
+        {
+            width: 721px;
+        }
+         .style2
+         {
+             width: 235px;
+         }
+         .style3
+         {
+             width: 207px;
+         }
+    </style>
+</head>
+<body id="bodycss1">
+   <form id="form1" runat="server">
+    <div>
+<table width="100%"><tr><td>
+<table background="images/header.PNG" width="100%"  border="0" height="80" id="divcss"><tr>
+<td class="style3"></td>
+<td class="style1"> <a href="HomePageLibrarian.aspx" target="self" title="SUNWAVE LIBRARY"><img src="images/Logo.PNG" Height="72" /><img src="images/SUNWAVE2NDLOGO.PNG" Height="72" /></a></td>
+<td valign="top" align="right" class="style2"> 
+    <asp:Label ID="Label1" runat="server" Text="username"></asp:Label>
+    <asp:DropDownList ID="DropDownList2" runat="server">
+        <asp:ListItem Value="logged in"></asp:ListItem>
+        <asp:ListItem Value="Log Out"></asp:ListItem>
+    </asp:DropDownList>
+    </td>
+<td valign="top" align=right>
+<i><b>Rate this Site :&nbsp;
+    </b>
+    <eo:Rating ID="Rating1" runat="server" ControlSkinID="None" 
+        EmptyStarHoverImageUrl="00108004" EmptyStarImageUrl="00108002" 
+        FullStarHoverImageUrl="00108003" FullStarImageUrl="00108001" Value="2">
+    </eo:Rating>
+    </i>
+</td>
+<td width="18%" valign="top"><a href="https://www.facebook.com/" target="_blank"><img src="images/facebook1.jpg" width="30" height="30" title="Facebook"></a>&nbsp;&nbsp;<a href="https://twitter.com/" target="_blank"><img src="images/twitter.jpg"  width="30" height="30" title="Twitter"></a>
+<a href="https://plus.google.com/â€Ž" target="_blank"><img src="images/google+.jpg" width="30" height="30" title="Google+"></a>&nbsp;&nbsp;<a href="http://www.youtube.com/" target="_blank"><img src="images/youtube.jpg" width="30" height="30" title="youtube"></a> 
+<a href="#" title="Small"><b style="font-size:12px">T</b></a>&nbsp;&nbsp;<a href="#" title="Large"><b style="font-size:16px">E</b></a>&nbsp;&nbsp;<a href="#" title="Larger"><b style="font-size:20px">X</b></a>&nbsp;&nbsp;<a href="#" title="Extra large"><b style="font-size:24px">T</b></a>
+<table><tr><td> <a href="#" title="Bold"><b style="font-size:18px">B</b></a></td><td>
+
+                                            <eo:ColorPicker ID="ColorPicker1" runat="server" ControlSkinID="None">
+                                                <popupstyle csstext="background-color:white;border-bottom-color:#999999;border-bottom-style:solid;border-bottom-width:1px;border-left-color:#999999;border-left-style:solid;border-left-width:1px;border-right-color:#999999;border-right-style:solid;border-right-width:1px;border-top-color:#999999;border-top-style:solid;border-top-width:1px;font-family:Verdana;font-size:10pt;padding-bottom:10px;padding-left:10px;padding-right:10px;padding-top:10px;" />
+                                                <TextBoxStyle CssText="border-right: #7f9db9 1px solid; border-top: #7f9db9 1px solid; border-left: #7f9db9 1px solid; border-bottom: #7f9db9 1px solid" />
+                                                <popuplayouttemplate>
+                                                    <table cellpadding="0" cellspacing="2">
+                                                        <tr>
+                                                            <td colspan="2">
+                                                                <table cellpadding="0" cellspacing="2">
+                                                                    <tr>
+                                                                        <td width="100">
+                                                                            <asp:Label ID="TitleText" runat="server">Select color:</asp:Label>
+                                                                        </td>
+                                                                        <td style="border: 1px solid lightgrey;" width="40">
+                                                                            &nbsp;<asp:PlaceHolder ID="AdjustedColor" runat="server"></asp:PlaceHolder>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <asp:PlaceHolder ID="ColorField" runat="server"></asp:PlaceHolder>
+                                                            </td>
+                                                            <td>
+                                                                <asp:PlaceHolder ID="SpectrumSlider" runat="server"></asp:PlaceHolder>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <table cellpadding="0" cellspacing="1">
+                                                        <tr>
+                                                            <td width="20">
+                                                                &nbsp;R:</td>
+                                                            <td>
+                                                                <asp:TextBox ID="RTextBox" runat="server" style="width:48px;"></asp:TextBox>
+                                                            </td>
+                                                            <td width="20">
+                                                                &nbsp;G:</td>
+                                                            <td>
+                                                                <asp:TextBox ID="GTextBox" runat="server" style="width:48px;"></asp:TextBox>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="20">
+                                                                &nbsp;B:</td>
+                                                            <td>
+                                                                <asp:TextBox ID="BTextBox" runat="server" style="width:48px;"></asp:TextBox>
+                                                            </td>
+                                                            <td width="20">
+                                                                &nbsp;#</td>
+                                                            <td>
+                                                                <asp:TextBox ID="WebColorTextBox" runat="server" style="width:48px;"></asp:TextBox>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="center" colspan="4">
+                                                                <asp:LinkButton ID="OKButton" runat="server">OK</asp:LinkButton>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </popuplayouttemplate>
+                                            </eo:ColorPicker>
+
+</td>
+<td> 
+    <asp:DropDownList ID="DropDownList1" runat="server">
+        <asp:ListItem Value="Language"></asp:ListItem>
+        <asp:ListItem>Hindi</asp:ListItem>
+        <asp:ListItem>English</asp:ListItem>
+        <asp:ListItem Value="Urdu"></asp:ListItem>
+        <asp:ListItem Value="Arabic"></asp:ListItem>
+        <asp:ListItem Value="Russian"></asp:ListItem>
+        <asp:ListItem Value="Chinese"></asp:ListItem>
+        <asp:ListItem Value="Portuguese"></asp:ListItem>
+        <asp:ListItem Value="Japanese"></asp:ListItem>
+    </asp:DropDownList>
+</td><td><a href="#" title="Live Help"><img src="images/Live Help.PNG" width="100"></a></td>
+</tr></table>
+
+</td>
+</tr></table>
+<table align="center" width="995" height="auto" border="0"><tr><td>
+<table align="center" width="995" height="30"><tr><td></td></tr></table>
+
+<div id='cssmenu'>
+<ul>
+   <li class='active'><a href="HomePageLibrarian.aspx" target="_self" title="Home"><img src="images/images.jpg" height="22">&nbsp;Home</a></li>
+   <li class='has-sub'><a href="Search_booklib.aspx" target="_self" title="Search Book"><img src="images/google-web-search-xxl.png" height="22">&nbsp;Search Book</a>
+     <%-- <ul>
+         <li><a href="Searchandfindfirst.aspx" title="Advance Search" target="_self"><span>Advance Search</span></a></li>
+         <li><a href="SearchandFind.aspx" title="Book" target="_self"><span>Books</span></a></li>
+         <li><a href="Journals.aspx"title="Journal" target="_self"><span>Journals</span></a></li>
+         <li class='last' ><a href="Magazines.aspx" tittle="Magazines" target="_self"><span>Magazines</span></a></li>
+      </ul>--%>
+   </li>
+   <li class='has-sub'><a href='#'><img src="images/books-icon.png" height="22">&nbsp;Book&nbsp;&nbsp;&nbsp;<img src="images/Downward.PNG" height="10" width="10" /></a>
+      <ul>
+         <li><a href="Addbook.aspx" target="_self" title="Add Book"><span>Add Book</span></a></li>
+         <li><a href="EditBooks Detail.aspx" target="_self" title="Edit Book detail" ><span>Edit Book detail</span></a></li>
+         <li class='last'><a href="Report_of_added_book.aspx" title="Report" target="_self"><span>Report</span></a></li>
+      </ul>
+   </li>
+   <li class='has-sub'><a href='#'><img src="images/Vista_icons_04.png" height="22">&nbsp;Add user&nbsp;&nbsp;&nbsp;<img src="images/Downward.PNG" height="10" width="10" /></a>
+      <ul>
+         <li><a href="NewUserRegistration1.aspx" target="_self" title="New Registration">New Registration</a></li>
+         <li class='last'><a href="EditUser.aspx"title="Edit user Detail">Edit user Detail</a></li>
+      </ul>
+   </li>
+    <li class='has-sub'><a href="#" target="_self" title="Issue Book"><img src="images/Issue book.jpg" height="22">&nbsp;Issue Book&nbsp;&nbsp;&nbsp;<img src="images/Downward.PNG" height="10" width="10" /></a>
+     <ul>
+         <li><a href="Issue_Book.aspx" title="Issue Book" target="_self"><span>Issue Book</span></a></li>
+         <li><a href="Renew_Book.aspx" title="Renew Book" target="_self"><span>Renew Book</span></a></li>
+         <li class='last' ><a href="Report_of_issued.aspx" tittle="Report" target="_self"><span>Report</span></a></li>
+      </ul>
+   </li>
+   <li class='last'><a href="Helplib.aspx" target="_self" title="Help"><span><img src="images/Help.jpg" height="22">&nbsp;Help&nbsp;&nbsp;&nbsp;&nbsp; </a></li>
+</ul>
+</div>
+
+<table height="300" background="images/library-banner.jpg" width="995"><tr><td></td></tr></table>
+<div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+ </div>
+</td></tr></table>
+<table height="10"><tr><td></td></tr></table>
+<table background="images/header.PNG" width="100%"  border="0" height="80" id="Table1"><tr><td>
+<marquee behavior="alternate"> <h4>Copyright@ SUNWAVE Library</h4></marquee>
+</td></tr></table>
+</td></tr></table>
+    </div>
+    </form>
+</body>
+</html>
